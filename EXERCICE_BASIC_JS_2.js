@@ -194,3 +194,43 @@
                     }
                     con = 1;
                 }
+                
+      
+
+                //EXE_10
+                var v1 = "hochohochocbt1";    // =>=> ho
+                var i = 0,j = 1,con = 0;                    //conteur 1-3-5__4-6 
+                var conteur = []; var result=""; 
+                                                                
+                for(var i = 0;i < v1.length;i++){
+                    for(var t1 = 0;t1 < v1.length;t1++){
+                        if(i == conteur[t1]){
+                            break;
+                        }
+                    }
+                    if(i == conteur[t1]){
+                        continue;
+                    }    
+                    if(i == v1.length-1){
+                        result+=v1[i];                          
+                        break;
+                    }                                                    
+                    for(j=i+1;j < v1.length;j++){       
+                        if(v1[i] == v1[j]){
+                            conteur.push(j);                                      
+                            if(j != v1.length-1){
+                                continue;
+                            }
+                            else if(j == v1.length-1){
+                                result+=v1[i];                          
+                                break;    
+                            }
+                        }
+                        if(j == v1.length-1){
+                            result+=v1[i];                          
+                            break;
+                        }
+                    }
+                }
+                document.write("word >>>"+v1+"<br>");
+                document.write("result >> "+result+"<br>");
