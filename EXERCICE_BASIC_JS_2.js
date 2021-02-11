@@ -234,3 +234,76 @@
                 }
                 document.write("word >>>"+v1+"<br>");
                 document.write("result >> "+result+"<br>");
+
+
+
+                //EX_11
+
+                /*
+                                                                        5
+                                                                       454
+                                                                      34543
+                                                                     2345432
+                                                                    123454321
+                                                                     2345432
+                                                                      34543
+                                                                       454
+                                                                        5  
+                */ 
+                var num_val = 10,last=0;
+                var sp = " ";
+                var c = 1;
+                for(var i = num_val;i > 0;i--){
+                    sp = "";
+                    for(var j = num_val-c;j > 0;j--){
+                        sp+=" ";
+                        
+                    }
+                    if(i == num_val){
+                        result = i;
+                        console.log(sp+""+result);
+                        sp="";
+                        c++;
+                        result="";
+                        continue;
+                    }
+                    else if(i < num_val){ 
+                    var result = "";
+                    result += i;
+                        for(var t1 = i;t1 < num_val; t1++){
+                            result+=(t1+1);
+                        }
+                        for(var t2 = num_val-1;t2 >= i; t2--){
+                            result+=(t2);
+                        }
+                    }
+                    console.log(sp+""+result);
+                    sp="";
+                    c++;
+                    result="";
+                }
+                c = 1;
+                var arr = [];
+                for(var i_1 =  num_val-1;i_1 > 0;i_1--){ // i = 4
+                    for(var j_1 = 0;j_1 < c;j_1++){
+                        sp+=" ";
+                    }
+                    for(var t3 = c+1;t3 <= num_val;t3++){   // t3 = 2  
+                        result+=t3;
+                        arr.push(t3);                       2
+                    }
+                    if(result == num_val){
+                        console.log(sp+""+result);
+                        break;
+                    }
+                    for(var t4 = num_val-1;t4 >= arr[0]; t4--){
+                        result+=(t4);
+                    }
+                    console.log(sp+""+result);
+                    arr.shift();
+                    sp="";
+                    result="";
+                    arr.pop();
+                    c++;
+                }
+                
