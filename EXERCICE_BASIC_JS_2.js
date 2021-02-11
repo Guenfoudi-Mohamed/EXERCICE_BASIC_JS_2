@@ -259,6 +259,9 @@
                         sp+=" ";
                         
                     }
+                    if(i == num_val && i > 10){
+                        sp+=" ";
+                    }
                     if(i == num_val){
                         result = i;
                         console.log(sp+""+result);
@@ -267,7 +270,7 @@
                         result="";
                         continue;
                     }
-                    else if(i < num_val){ 
+                    else if(i < num_val){ //i=4;
                     var result = "";
                     result += i;
                         for(var t1 = i;t1 < num_val; t1++){
@@ -284,21 +287,27 @@
                 }
                 c = 1;
                 var arr = [];
-                for(var i_1 =  num_val-1;i_1 > 0;i_1--){ // i = 4
+                for(var i_1 =  num_val-1;i_1 > 0;i_1--){ 
                     for(var j_1 = 0;j_1 < c;j_1++){
                         sp+=" ";
                     }
-                    for(var t3 = c+1;t3 <= num_val;t3++){   // t3 = 2  
+                    
+                    for(var t3 = c+1;t3 <= num_val;t3++){  
                         result+=t3;
-                        arr.push(t3);                       2
+                        arr.push(t3);                       
+                    }
+                    if(result == num_val && result > 10){
+                        sp+=" ";
                     }
                     if(result == num_val){
                         console.log(sp+""+result);
                         break;
                     }
+                    
                     for(var t4 = num_val-1;t4 >= arr[0]; t4--){
                         result+=(t4);
                     }
+
                     console.log(sp+""+result);
                     arr.shift();
                     sp="";
