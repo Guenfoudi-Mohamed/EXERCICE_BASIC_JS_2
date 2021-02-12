@@ -316,3 +316,45 @@
                     c++;
                 }
                 
+
+
+
+
+
+                //EX_12
+                
+                var num = 21,cn;
+                var result = "";
+                console.log("=== Number of lines : "+num+" ===");
+                // console.log();
+                for(var i = 0;i < num;i++){
+                    cn = i+1;
+                    for(var j = 0;j < 1;j++){
+                        for(var z = 0;z < num;z++){
+                            result+="*";
+                        }
+                    }
+                    if(result[i] == "*" && result[result.length-cn] == "*"){
+                        var op = result.length-cn;
+                        
+                        result="";
+                        for(var y1 = 0;y1 < num;y1++){
+                            if(y1 == i || y1 == op){
+                                result+="G";
+                            }
+                            else{
+                                result+="*";
+                            }
+                        } 
+                    }
+                    // if(num%2 == 1){
+                    //     if(i == (num-1)/2){
+                    //         console.log(result);
+                    //         result="";
+                    //         continue;
+                    //     }
+                    // }
+                    console.log(result);
+                    result="";
+                }
+                
