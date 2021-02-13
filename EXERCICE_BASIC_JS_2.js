@@ -251,7 +251,7 @@
                                                                         5  
                 */ 
                 var num_val = 10,last=0;
-                var sp = " ";
+                var sp = " ",result = "";
                 var c = 1;
                 for(var i = num_val;i > 0;i--){
                     sp = "";
@@ -271,7 +271,7 @@
                         continue;
                     }
                     else if(i < num_val){ //i=4;
-                    var result = "";
+                    result = "";
                     result += i;
                         for(var t1 = i;t1 < num_val; t1++){
                             result+=(t1+1);
