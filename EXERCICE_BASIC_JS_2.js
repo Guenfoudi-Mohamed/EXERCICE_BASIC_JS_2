@@ -358,3 +358,27 @@
                     result="";
                 }
                 
+                
+                //EX_13
+
+                var num_line = 5;
+                var stars = "*"; //star*2 
+                for(var i = 0 ; i < num_line ; i++){
+                    console.log(stars+"<br>");
+                    stars+="**";
+                }
+            
+
+
+                //EX_14
+
+                var num_line = 9;
+                var sp = "";result ="";
+                for(var i = 0;i < num_line ; i++){
+                    for(var j = 1;j < num_line-i;j++){
+                        sp+=" ";
+                    }
+                    result += 1+i;
+                    console.log(sp+result);
+                    sp = "";
+                }
