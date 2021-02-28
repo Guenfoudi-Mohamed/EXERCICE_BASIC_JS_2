@@ -382,3 +382,23 @@
                     console.log(sp+result);
                     sp = "";
                 }
+
+                //EX_15
+
+                var v1 = [1,1,2,3,5,5,1,6,7,1,5,1,5,9,5,9,5,9,5,9,5,9,1,100];
+                var v2 = [];
+                var dep = 0;
+                for(var j = 0;j < v1.length*2;j++){
+                    for(var i = 0;i < v1.length;i++){
+                        var result = (v1[i] % 2);  
+                        if(result == 1){
+                            dep = v1[i];
+                            v1[i] = v1[v1.length-1];
+                            v1[v1.length-1] = dep;
+                            v2.push(v1[v1.length-1]);
+                            v1.pop();
+                        }
+                    }
+                }
+                document.write("list_1 : "+v1+"<br>");
+                document.write("list_2 : "+v2.join('+')); //join('seperator'); << seperatore methode
