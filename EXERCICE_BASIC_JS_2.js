@@ -402,3 +402,28 @@
                 }
                 document.write("list_1 : "+v1+"<br>");
                 document.write("list_2 : "+v2.join('+')); //join('seperator'); << seperatore methode
+
+
+
+                //EX_16 METHODE ADNANE
+                
+                var list_1 = [1,5,1,2,4,2,5,6,3,2,1,5,2,4,5,1,2]; // >> 1,5,2,4,6,3 
+                var list_2 = [];
+                var boll = false;
+                for(var i = 0;i < list_1.length;i++){
+                    for(var k = 0;k < list_2.length; k++){
+                        if(list_1[i] == list_2[k]){
+                            boll = true;
+                            break;
+                        }
+                        else{
+                            boll = false;
+                            continue;
+                        }
+                    }
+                    if(boll == false){
+                        list_2.push(list_1[i]);
+                    }
+                }
+                document.write(list_1+"<br>");
+                document.write(list_2);
