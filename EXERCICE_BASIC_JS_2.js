@@ -427,3 +427,23 @@
                 }
                 document.write(list_1+"<br>");
                 document.write(list_2);
+
+                //EX_16 METHODE me
+                
+                var list_1 = "hello world"; //>> 1,5,2,4,6,3 
+                var list_2 = "";
+                var con = 0;
+
+                for(var i = 0;i < list_1.length;i++){
+                    for(var j = 0;j < list_2.length;j++){
+                        if(list_1[i] == list_2[j]){
+                            con++;
+                            continue;
+                        }
+                    }
+                    if(con == 0){
+                        list_2+=list_1[i];
+                    }
+                    con = 0;
+                }
+                document.write(list_1+"<br>"+list_2);
