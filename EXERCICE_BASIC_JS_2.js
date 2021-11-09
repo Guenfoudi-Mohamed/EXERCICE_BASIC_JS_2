@@ -447,3 +447,32 @@
                     con = 0;
                 }
                 document.write(list_1+"<br>"+list_2);
+                
+                //EX_17
+                let list = [1,55,2,6,100,-5,0,9652,-55,0,221,25,625,-6,52,8,0.3,226.5,-65,-47,9,62,-8,-1000,-512,-85.6,541,336]; 
+                let stock;
+                for(let x = 0;x < (list.length/2);x++){
+                    for(let i = 0;i < list.length;i++){
+                        if(list[i] < list[i+1]){
+                            stock = list[i];
+                            list[i] = list[i+1];
+                            list[i+1] = stock;
+                        }
+                        else if(list[i] > list[i+1] || list[i] == list[i+1]){
+                            continue;
+                        }
+                        // console.log("1:> "+list);
+                    }
+                    for(let x = list.length-1;x >= 0;x--){
+                        if(list[x] > list[x-1]){
+                            stock = list[x];
+                            list[x] = list[x-1];
+                            list[x-1] = stock;
+                        }
+                        else if(list[x] < list[x-1] || list[x] == list[x-1]){
+                            continue;
+                        }
+                        // console.log("2:> "+list); 
+                    }
+                }
+                console.log("RESULT : "+list);
