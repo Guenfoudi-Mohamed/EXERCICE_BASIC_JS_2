@@ -476,3 +476,16 @@
                     }
                 }
                 console.log("RESULT : "+list);
+                
+
+                // Ex_18
+                // let word = "hello world";let result = ""; // variable declaration 
+                // for(let i = 0;i < word.length;i++){         // loop for
+                //     if((i % 2) == 1){                           //condition if
+                //         result+=word[i].toUpperCase();
+                //     }
+                //     else if((i % 2) == 0){                      //condition else if
+                //         result+=word[i].toLowerCase();
+                //     }
+                // }
+                // document.write(result);                         //display result
