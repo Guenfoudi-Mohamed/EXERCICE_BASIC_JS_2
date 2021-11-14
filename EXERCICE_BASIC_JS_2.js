@@ -478,14 +478,50 @@
                 console.log("RESULT : "+list);
                 
 
-                // Ex_18
-                // let word = "hello world";let result = ""; // variable declaration 
-                // for(let i = 0;i < word.length;i++){         // loop for
-                //     if((i % 2) == 1){                           //condition if
-                //         result+=word[i].toUpperCase();
-                //     }
-                //     else if((i % 2) == 0){                      //condition else if
-                //         result+=word[i].toLowerCase();
-                //     }
-                // }
-                // document.write(result);                         //display result
+                //Ex_18
+                let word = "hello world";let result = ""; // variable declaration 
+                for(let i = 0;i < word.length;i++){         // loop for
+                    if((i % 2) == 1){                           //condition if
+                        result+=word[i].toUpperCase();
+                    }
+                    else if((i % 2) == 0){                      //condition else if
+                        result+=word[i].toLowerCase();
+                    }
+                }
+                document.write(result);                         //display result
+
+                
+
+
+                //Ex_19
+                let myAdmins = ["Ahmed","Osama","Sayed","Stop","Samer"]; //LIST 1
+                let myEmployees = ["Amgad","Samah","Ameer","Omar","Othman","Amany","Samia","Anwar"]; //LIST 2
+                let conteur = 0;
+                let num = 0;
+                let calc = () =>{
+                    for(let i = 0;i<myAdmins.length;i++){
+                        if(myAdmins[i] == "Stop"){
+                            break;
+                        }
+                        else{
+                            conteur++;
+                        }
+                    }
+                    document.write("We have "+conteur+" Admins<br><br>");
+                    for(let x = 0;x < myAdmins.length;x++){
+                        if(myAdmins[x] == "Stop"){
+                            break;
+                        }
+                        document.write("The admin for Team "+(x+1)+" is "+myAdmins[x]+"<br>");
+                        document.write("Team Members : <br>");
+                        for(let y = 0;y<myEmployees.length;y++){
+                            if(myAdmins[x][0] == myEmployees[y][0]){  //Character comparison 
+                                num++;
+                                document.write("- "+num+" "+myEmployees[y]+"<br>");
+                            }
+                        }
+                        num=0;
+                        document.write("<br>");
+                    }
+                }
+                calc();
