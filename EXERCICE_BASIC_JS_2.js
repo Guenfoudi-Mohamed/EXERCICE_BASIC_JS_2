@@ -525,3 +525,35 @@
                     }
                 }
                 calc();
+
+              // 3 ways to sort an array 
+                //==========================
+                
+                    //Method_1
+
+                let list = [100,1,2252,3,42,-5,65,76,6.81,96];
+                let conteur = 0,statu = false,stock=0;
+                for(let i =1;i<list.length;i++){
+                    for(let y = 0;y<list.length;y++){
+                        if(list[y] < list[y+1]){
+                            conteur++;
+                            console.log(""+conteur);
+                        }
+                        if(conteur == list.length-1){
+                            statu = true;
+                            break;
+                        }
+                        else if(list[y] > list[y+1]){
+                            stock = y;
+                            break;
+                        }
+                    } 
+                    conteur = 0;
+                    if(statu==true){break;}
+                    for(let x = stock;x<list.length-1;x++){
+                        if(list[x] > list[x+1]){
+                            [list[x+1] , list[x]]=[list[x] , list[x+1]];
+                        }
+                    }
+                }
+                console.log(list);
