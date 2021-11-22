@@ -574,12 +574,12 @@
 
                     //Method_3
 
-                // let list = [5,9,1,5,9,1];               
-                // for(var i = 1; i<list.length ; i++){
-                //     for(var x =0;x<list.length-i;x++){
-                //         if(list[x] > list[x+1]){
-                //             [list[x+1] , list[x]] = [list[x] , list[x+1]];
-                //         }
-                //     }
-                // }
-                // console.log(list);
+                let list = [5,9,1,5,9,1];               
+                for(var i = 1; i<list.length ; i++){
+                    for(var x =0;x<list.length-i;x++){
+                        if(list[x] > list[x+1]){
+                            [list[x+1] , list[x]] = [list[x] , list[x+1]];
+                        }
+                    }
+                }
+                console.log(list);
