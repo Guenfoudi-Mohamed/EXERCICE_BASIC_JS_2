@@ -583,3 +583,39 @@
                     }
                 }
                 console.log(list);
+
+
+                //===Exercice 1 & 2===
+
+                
+                //===Exercice 1
+                let str = "hello world";
+                let list1 = [];
+                let conteur = 1;
+                for(let i =0;i<str.length;i++){
+                    list1[i] = str[i]            
+                }
+                console.log(list1);
+                for(let x =0;x<list1.length;x++){
+                    for(let y = x+1;y<list1.length;y++){
+                        if(list1[x] == list1[y]){
+                            conteur++;
+                            list1[y]="";
+                        }
+                    }
+                    if(list1[x] == " " || list1[x] == ""){conteur = 1; continue;}
+                    console.log(list1[x] +" : "+ conteur);
+                    conteur = 1;
+                }
+                console.log(list1);
+
+
+                //===Exercice 2==="
+                
+                str="";
+                for(let w = 0;w<list1.length;w++){
+                    if(list1[w] != ""){
+                        str+=list1[w];
+                    }
+                }
+                console.log(str);
