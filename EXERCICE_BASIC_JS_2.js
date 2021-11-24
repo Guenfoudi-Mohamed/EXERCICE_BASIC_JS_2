@@ -619,3 +619,26 @@
                     }
                 }
                 console.log(str);
+
+
+
+                //exercice remove from array not overwrite
+                
+                var arr = [1,3,3,1,1,3,3,3,3,3,3,8,3,1,1,1,9,8,1,3];
+
+                for(let i = 0;i < arr.length;i++){
+                    for(let x= i+1;x < arr.length;x++){
+                        if(arr[i] == arr[x]){
+                            if(x == arr.length-1){
+                                arr.pop();
+                                continue;
+                            }
+                            for(let y = x;y < arr.length-1;y++){ 
+                                [arr[y+1],arr[y]]=[arr[y],arr[y+1]];
+                            }
+                            arr.pop();
+                            x=x-1;
+                        }
+                    }
+                }
+                console.log(arr);
