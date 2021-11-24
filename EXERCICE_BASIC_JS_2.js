@@ -642,3 +642,22 @@
                     }
                 }
                 console.log(arr);
+
+
+                // Creat Method Delete case of arrays  Delete(list,case'index+1');
+
+                let arr = [1,5,4,5,5,6,2,6,2,5,1,4,2,58,8,5,5,1,"sd",4]
+                function Delete(list,index){
+                    --index;
+                    if(index >= list.length || index < 0){
+                        return `Enter Number entie Between ${1} & ${list.length}`;
+                    }
+                    else{
+                        for(let y = index;y < list.length-1;y++){ 
+                            [list[y+1],list[y]]=[list[y],list[y+1]];
+                        }
+                        list.pop();
+                        return list;
+                    }
+                }
+                console.log(Delete(arr/*array*/,2/*case*/));
