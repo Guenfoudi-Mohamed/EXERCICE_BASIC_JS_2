@@ -661,3 +661,65 @@
                     }
                 }
                 console.log(Delete(arr/*array*/,2/*case*/));
+
+
+//Exercice__1
+
+                // let arr = [1,2,3,3,3,3,3,2,2,2,1,2,2,2,2,-2,"2",2,2,2,,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,2,2];             
+                // let arr1 = [];
+                // let conteur = 1,most = 0,con=0;
+                // let n1 = false;
+                
+                // for(let i =0;i<arr.length;i++){
+                //     for(let x = i+1;x<arr.length;x++){   
+                //         for(let y =0;y<arr1.length;y++){
+                //             if(i == arr1[y]){
+                //                 n1 = true;
+                //                 break;
+                //             }
+                //         }
+                //         if(n1 == true){
+                //             n1 == false;
+                //             continue;
+                //         }
+                //         if(arr[i] === arr[x]){
+                //             conteur++;
+                //             arr1.push(x);
+                //         }
+                //     }
+                //     if(con < conteur){
+                //         most = arr[i];
+                //         con = conteur;
+                //     }
+                //     conteur=1;
+                // }
+                // console.log(`The most repeated number is ${most} Repeat ${con} times`);
+
+
+                //Exercice__2
+
+                // let arr = [1,2,3,3,3,3,3,2,2,2,1,2,2,2,2,2,2,2,3,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,2,2];              
+                // let arr1 = [];
+                // let conteur = 1;
+                // let n1 = false;
+                
+                // for(let i = 0;i < arr.length;i++){
+                //     for(let y =0;y<arr1.length;y++){
+                //         if(i == arr1[y]){
+                //             n1 = true;
+                //             break;
+                //         }
+                //     }
+                //     if(n1 == true){
+                //         n1 = false;
+                //         continue;
+                //     }
+                //     for(let x = i+1;x<arr.length;x++){   
+                //         if(arr[i] === arr[x]){
+                //             conteur++;
+                //             arr1.push(x);                      //arr1 = [1,]
+                //         }
+                //     }
+                //     console.log(`number ${arr[i]} Repeat ${conteur} times`);
+                //     conteur=1;
+                // }
