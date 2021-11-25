@@ -723,3 +723,35 @@
                 //     console.log(`number ${arr[i]} Repeat ${conteur} times`);
                 //     conteur=1;
                 // }
+
+//Exercice__3
+
+                // let arr = [1,2,3,3,3,3,3,3,1,2,"x",4,4];
+                // let conteur = 0;
+                // let arr1 = [];
+                // let arr2 = [];
+                // let n1 = false;
+
+                // for(let i = 0;i < arr.length;i++){
+                //     for(let y =0;y<arr2.length;y++){
+                //         if(i == arr2[y]){
+                //             n1 = true;
+                //             break;
+                //         }
+                //     }
+                //     if(n1 == true){
+                //         n1 = false;
+                //         continue;
+                //     }
+                //     for(let x = i+1;x<arr.length;x++){   
+                //         if(arr[i] === arr[x]){
+                //             arr2.push(x);
+                //             conteur++;
+                //         }
+                //     }
+                //     if(conteur == 0){
+                //         arr1.push(arr[i]);  
+                //     }
+                //     conteur = 0;
+                // }
+                // console.log(arr1);
