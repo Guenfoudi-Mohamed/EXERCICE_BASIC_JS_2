@@ -761,16 +761,16 @@
 //Exercice__4
 
                 //method_1
-                // let list = [2,5,1,6,9,8,4,2,5,6,3,2,5,4,12,5,8,6,5];
-                // console.log(list);
-                // for(let i = 0;i<list.length;i++){
-                //     for(let x = i+1;x<list.length;x++){
-                //         if(list[i] > list[x]){
-                //             [list[x],list[i]]=[list[i],list[x]];
-                //         }
-                //     }
-                // }
-                // console.log("The first largest number is : "+list[list.length-1]+" & the second is : "+list[list.length-2]);
+                let list = [2,5,1,6,9,8,4,2,5,6,3,2,5,4,12,5,8,6,5];
+                console.log(list);
+                for(let i = 0;i<list.length;i++){
+                    for(let x = i+1;x<list.length;x++){
+                        if(list[i] > list[x]){
+                            [list[x],list[i]]=[list[i],list[x]];
+                        }
+                    }
+                }
+                console.log("The first largest number is : "+list[list.length-1]+" & the second is : "+list[list.length-2]);
                 
                 //method_2
 
@@ -835,3 +835,15 @@
                 for(let t = arr.length-1;t>=arr.length-2;t--){
                     console.log("The "+((t-arr.length)*-1)+" smallest number is "+arr[t]);
                 }
+                
+                //Exercice__5
+
+                let list = ["abc","ab","abcd","a","abcde","abc"];
+                let max = 0; 
+                for(let i = 0; i < list.length;i++){
+                    if(max < list[i].length){
+                        result = list[i]; 
+                        max = list[i].length;
+                    }
+                }
+                console.log(result);
