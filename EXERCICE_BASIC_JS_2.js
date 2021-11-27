@@ -756,3 +756,82 @@
                     conteur = 0;
                 }
                 console.log(arr1);
+
+
+//Exercice__4
+
+                //method_1
+                // let list = [2,5,1,6,9,8,4,2,5,6,3,2,5,4,12,5,8,6,5];
+                // console.log(list);
+                // for(let i = 0;i<list.length;i++){
+                //     for(let x = i+1;x<list.length;x++){
+                //         if(list[i] > list[x]){
+                //             [list[x],list[i]]=[list[i],list[x]];
+                //         }
+                //     }
+                // }
+                // console.log("The first largest number is : "+list[list.length-1]+" & the second is : "+list[list.length-2]);
+                
+                //method_2
+
+                let list = [1,5,52,625,252,45,20,3,9];
+                let max = 0;// max != no list[0]
+                let index = 0,conteur=0; 
+                let arr = [];
+                let arr1 = [];
+                let n1 = false;
+                for(let i = 0;i <= list.length;i++){
+                    for(let x = 0;x < arr1.length;x=x+1){
+                        if(i == arr1[x]){
+                            n1 = true;
+                            break;
+                        }
+                    }
+                    if(n1 == true){
+                        n1 = false;
+                        continue;
+                    }
+                    if(list[i] > max){
+                        max = list[i];
+                        index = i;  
+                    }
+                    if(i == list.length){
+                        conteur++;
+                        arr.push(max);
+                        arr1.push(index);
+                        max = 0; 
+                        index = 0; 
+                        if(conteur == list.length){ // conteur == number of line  // 
+                            break;
+                        }
+                        i=-1;
+                    }
+                    // if(list[i] > max){
+                    //     index = i;
+                    //     max = list[i];
+                    // }
+                    // if(max == list[list.length-1]){
+                    //     console.log("hello");
+                    //     arr.push(max);
+                    //     arr.push(index);
+                    //     break;
+                    // }
+                    // if(i == (list.length-t)){
+                    //     conteur++;
+                    //     arr.push(max);
+                    //     arr.push(index);
+                    //     max = 0;
+                    //     index = 0;
+                    //     if(conteur > 1){
+                    //         break;
+                    //     }
+                    //     i = -1;                    
+                    // }
+                }
+                for(let t = 0;t<2;t++){
+                    console.log("The "+(t+1)+" largest number is "+arr[t]);
+                }
+                console.log("=".repeat(10*3));
+                for(let t = arr.length-1;t>=arr.length-2;t--){
+                    console.log("The "+((t-arr.length)*-1)+" smallest number is "+arr[t]);
+                }
