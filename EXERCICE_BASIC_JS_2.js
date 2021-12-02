@@ -848,31 +848,31 @@
                 }
                 console.log(result);
 
-//Exercice__6
+                //Exercice__6
 
-                // let num_line = 5;
-                // let result="";
-                // for(let i = 1;i <= num_line;i++){
-                //     if(i == 1 || i == num_line){
-                //         for(let x = 1;x <= i;x++){
-                //             result+=x+"";    
-                //         }
-                //         console.log(result);
-                //         result="";
-                //         continue;
-                //     }
-                //     else{
-                //         for(let y = 1;y <= i;y++){ //2
-                //             if(y == 1 || y == i){
-                //                 result+=y+"";
-                //             }    
-                //             else{result+=" ";}
+                let num_line = 5;
+                let result="";
+                for(let i = 1;i <= num_line;i++){
+                    if(i == 1 || i == num_line){
+                        for(let x = 1;x <= i;x++){
+                            result+=x+"";    
+                        }
+                        console.log(result);
+                        result="";
+                        continue;
+                    }
+                    else{
+                        for(let y = 1;y <= i;y++){ //2
+                            if(y == 1 || y == i){
+                                result+=y+"";
+                            }    
+                            else{result+=" ";}
 
-                //         }
-                //         console.log(result);
-                //         result="";
-                //     }
-                // }
+                        }
+                        console.log(result);
+                        result="";
+                    }
+                }
 
                 //Exercice__7
                 for(var i=1 ; i<=5 ; i++){
