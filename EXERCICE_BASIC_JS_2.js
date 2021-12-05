@@ -892,3 +892,34 @@
                     }
                     document.write( "<br>")
                 }
+
+                //Pascal's triangle
+
+                var arr_1 = [],arr_2 = [];
+                var result = 0;
+                function tp(num_line){
+                    document.write("Pascal's triangle :<br>");
+                    for(var i = 1;i <= num_line;i++){                                
+                        for(var j = 0;j < i;j++){            
+                            if(j == 0 || j == (i-1)){         
+                                arr_2.push(1);              
+                                continue;
+                            }
+                            result = arr_1[j]+arr_1[(j-1)];
+                            arr_2.push(result);
+                        }
+                        if((i >= 2)){
+                            // console.log(i);                             
+                            arr_1.splice(0,arr_1.length);                       
+                            for(var y = 0;y<arr_2.length;y++){                      
+                                arr_1.push(arr_2[y]);                                   
+                            }
+                            document.write(arr_2+"<br>");                    
+                            arr_2.splice(0,arr_2.length);                         
+                            continue;    
+                        } 
+                        document.write(arr_2+"<br>");                  
+                        arr_2.splice(0,arr_2.length);                   
+                    }
+                }
+                tp(10);
