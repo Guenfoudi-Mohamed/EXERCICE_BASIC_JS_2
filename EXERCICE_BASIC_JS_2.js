@@ -923,3 +923,30 @@
                     }
                 }
                 tp(10);
+
+
+
+  //method delete();
+    // let list = [1,5,5,6,9,8]; //short of (2) 
+    let list = new Array(1,5,5,6,9,8); ////////  <=<=(2)
+    Array.prototype.Delete = function(index){
+        let arr = this;
+        // console.log(this instanceof Array);
+        if(index>list.length || index < 1){
+            return `Erorr =>=> number of case  ==  1 ~ ${arr.length}`;
+        }
+        else{
+            --index;
+            if(index >= arr.length || index < 0){
+                return `Enter Number entie Between ${1} & ${arr.length}`;
+            }
+            else{
+                for(let y = index;y < arr.length-1;y++){ 
+                    [arr[y+1],arr[y]]=[arr[y],arr[y+1]];
+                }
+                arr.pop();
+                return arr;
+            }
+        }
+    }
+    console.log(list.Delete(4));
