@@ -950,3 +950,20 @@
         }
     }
     console.log(list.Delete(4));
+
+//method sort array 'number'
+    let list = [-9,0,3,4,9,2,6,5];
+    Array.prototype.sortarray = function(){
+        let arr = this;
+        console.log(arr);
+        for(let i = 0;i < arr.length-1;i++){
+            for(let j = 0;j < arr.length-i;j++){
+                if(arr[j] > arr[j+1]){
+                    [arr[j+1],arr[j]] = [arr[j],arr[j+1]]; 
+                }
+            }   
+        }
+        return arr;
+    }
+    console.log(list.sortarray());
+
