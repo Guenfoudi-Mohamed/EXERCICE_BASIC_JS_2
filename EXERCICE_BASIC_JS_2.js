@@ -967,3 +967,32 @@
     }
     console.log(list.sortarray());
 
+
+
+
+
+
+
+    //=== convert array multidimensional to array one dimension ===
+
+    let list0 = ["mohamed",["amine","youssef"],["isam",["khalid","adnan"]],"abdellah",["med",["med1",["hy",[99,true]]]]];
+    let list1 = [];
+    let list2 = [];
+    let result = "";
+    for(i = 0;i<list0.length;i++){
+        if(!Array.isArray(list0[i])){
+            list2[list2.length] = list0[i];
+        }
+        else{
+            list1 = list0[i];
+            for(let j = 0;j<list1.length;j++){
+                if(Array.isArray(list1[j])){
+                    list1=list1[j];
+                    j=-1;
+                    continue;
+                }
+                list2[list2.length] = list1[j]; 
+            }
+        }
+    }
+    console.log(list2);
