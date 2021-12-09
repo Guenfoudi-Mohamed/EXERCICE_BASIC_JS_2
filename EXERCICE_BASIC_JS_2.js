@@ -996,3 +996,68 @@
         }
     }
     console.log(list2);
+
+
+
+//Exercise without methods CharSearch
+
+    let list0 = [["mohamed"],["amine","youssef"],["isam",["khalisd","hamid"]],"abdellah",["med",["meddt","medt",["hy"]]]]; 
+    function SearchChar(arr,char){
+        let list1 = [];
+        let list2 = [];
+        let conteur = 0;
+        let result = "";
+        let bool = false;
+        let r = 1;
+        for(i = 0;i<arr.length;i++){
+            if(!Array.isArray(arr[i])){
+                list2[list2.length] = arr[i];        //push();
+            }
+            else{
+                list1 = arr[i];
+                for(let j = 0;j<list1.length;j++){
+                    if(Array.isArray(list1[j])){
+                        list1=list1[j];
+                        j=-1;
+                        continue;
+                    }
+                    list2[list2.length] = list1[j]; 
+                }
+            }
+        }
+        console.log(list2);
+        for(let x = 0;x<list2.length;x++){                                    
+            for(let z = 0;z<list2[x].length;z++){
+                if(list2[x][z] === char[0] && list2[x].length >= char.length){
+
+                    if(char.length === 1){result += list2[x]+" ";bool=true;continue;}
+
+                    for(let y = z+1;y<=(z+char.length);y++){ 
+                        if(list2[x][y] === char[r]){
+                            conteur++; 
+                            r++; 
+                            if(conteur === char.length-1){
+                                conteur=0;
+                                result += list2[x]+" "; 
+                                r=1;
+                                bool = true;
+                                break;
+                            }
+                        }
+                        
+                    }  
+                }
+                r=1;
+                conteur=0;
+                if(bool == true){
+                    bool = false;
+                    break;
+                }
+            }
+        }
+        if(result === ""){
+            result = "Error *-_-*";
+        }
+        return result;
+    }
+    console.log(SearchChar(list0,"ham")); 
