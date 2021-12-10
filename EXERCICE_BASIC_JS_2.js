@@ -1000,23 +1000,22 @@
 
 
 //Exercise without methods CharSearch
-
-    let list0 = [["mohamed"],["amine","youssef"],["isam",["khalisd","hamid"]],"abdellah",["med",["meddt","medt",["hy"]]]]; 
+let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"abdellah",["med",["meddt","medt",["hy"]]]]; 
     function SearchChar(arr,char){
         let list1 = [];
         let list2 = [];
         let conteur = 0;
         let result = "";
         let bool = false;
-        let r = 1;
+        r = 0;
         for(i = 0;i<arr.length;i++){
-            if(!Array.isArray(arr[i])){
-                list2[list2.length] = arr[i];        //push();
+            if(!(arr[i] instanceof Array)){
+                list2[list2.length] = arr[i];    //push();
             }
             else{
                 list1 = arr[i];
                 for(let j = 0;j<list1.length;j++){
-                    if(Array.isArray(list1[j])){
+                    if(list1[j] instanceof Array){
                         list1=list1[j];
                         j=-1;
                         continue;
@@ -1025,39 +1024,34 @@
                 }
             }
         }
-        console.log(list2);
         for(let x = 0;x<list2.length;x++){                                    
-            for(let z = 0;z<list2[x].length;z++){
-                if(list2[x][z] === char[0] && list2[x].length >= char.length){
-
-                    if(char.length === 1){result += list2[x]+" ";bool=true;continue;}
-
-                    for(let y = z+1;y<=(z+char.length);y++){ 
-                        if(list2[x][y] === char[r]){
-                            conteur++; 
-                            r++; 
-                            if(conteur === char.length-1){
-                                conteur=0;
-                                result += list2[x]+" "; 
-                                r=1;
-                                bool = true;
-                                break;
-                            }
+            for(let z = 0;z<list2[x].length;z++){                                   
+                if(list2[x][z] === char[r]){           
+                    for(let w =(z+1);w < z+char.length;w++){  
+                        r++;
+                        if(list2[x][w] === char[r]){
+                            conteur++;
                         }
-                        
-                    }  
+                    }
+                    if(conteur===char.length-1){ 
+                        result+=list2[x]+" "
+                        r=0;
+                        conteur=0;
+                        bool=true;
+                        break;
+                    }
+                    else{r=0;conteur=0;continue;}
                 }
-                r=1;
+            }
+            if(bool===true){
+                bool=false;
+                r=0;
                 conteur=0;
-                if(bool == true){
-                    bool = false;
-                    break;
-                }
             }
         }
         if(result === ""){
-            result = "Error *-_-*";
+            result = "Error *-_-* => => char paramter";
         }
-        return result;
+        return "Result : "+result;
     }
-    console.log(SearchChar(list0,"ham")); 
+    console.log(SearchChar(list0,"hy")); 
