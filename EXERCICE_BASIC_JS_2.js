@@ -1091,3 +1091,10 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
     }
     list.POP();
     console.log(list);
+
+
+                                                                                          // method remove from array
+    
+    var ar = [1, 2, 3, 4, 5, 6];
+    ar.length = ar.length-1; // set length to remove elements
+    console.log( ar ); // [1, 2, 3, 4]
