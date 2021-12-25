@@ -1098,3 +1098,32 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
     var ar = [1, 2, 3, 4, 5, 6];
     ar.length = ar.length-1; // set length to remove elements
     console.log( ar ); // [1, 2, 3, 4]
+
+
+                                                                                            //method unshift();
+    let list = [1,2,3,4];
+    console.log(list);
+    Array.prototype.UNSHIFT = function(value){
+        let arr = this;
+        for(let i = 0;i<arr.length;i++){
+            [arr[arr.length-i],arr[arr.length-(i+1)]]=[arr[arr.length-(i+1)],arr[arr.length-i]];
+        }
+        arr[0]=value;
+    }
+    list.UNSHIFT(0);
+    console.log(list);
+    
+
+                                                                                        
+                                                                                            //method shift();
+    let list = [1,2,3,4];
+    console.log(list);
+    Array.prototype.SHIFT = function(){
+        let arr = this;
+        for(let i = 0;i<arr.length-1;i++){
+            [arr[i+1],arr[i]]=[arr[i],arr[i+1]];
+        }
+        arr.length=arr.length-1;
+    }
+    list.SHIFT();
+    console.log(list);
