@@ -1055,3 +1055,39 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
         return "Result : "+result;
     }
     console.log(SearchChar(list0,"hy")); 
+
+
+                                                                                      //method push();
+    let list = [1,5,6,9,1];
+    console.log(list);
+    
+    Array.prototype.PUSH = function(value){
+        let arr = this;
+        arr[arr.length]=value;
+    }
+    list.PUSH(55);
+    console.log(list);
+
+
+
+                                                                                        //method pop();
+
+    let list = [1,5,6,9,4];
+    console.log(list);
+    Array.prototype.POP = function(){
+            //method1
+        // let arr = this;
+        // delete arr[arr.length-1];
+        // if(arr[arr.length-1] === undefined){
+        //     arr.length=arr.length-1;
+        // }
+            //method2
+        let arr = this;
+        let arr1 = [];
+        for(let i = 0;i<arr.length-1;i++){
+            arr1[i] = arr[i];
+        }
+        arr.length=arr1.length;
+    }
+    list.POP();
+    console.log(list);
