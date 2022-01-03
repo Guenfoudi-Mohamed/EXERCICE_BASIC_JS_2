@@ -1127,3 +1127,35 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
     }
     list.SHIFT();
     console.log(list);
+
+
+
+  /*Exercice Prime Numbers */ 
+    let num =50;
+    let arr2 = [];
+    for(let x =3;x<num;x=x+2){
+        for(let y=3;y<=(num/x);y=y+2){
+        if((x*y) >= 10){
+            arr2[arr2.length]=x*y;
+        }
+        }
+    }
+    for(let i =0;i<=num;i++){ 
+        let conteur =0;
+        if(i>1){
+            if(i==2){
+                console.log(i);
+                continue;
+            }
+            if(i%2==1&&i!=9&&i<10){
+                console.log(i);
+                continue;
+            }
+            if(i%2==1 && i>10){
+                for(let w=0;w<arr2.length;w++){
+                    if(i==arr2[w]){conteur++;break;}
+                }
+                if(conteur==0){console.log(i);}
+            }
+        }
+    }
