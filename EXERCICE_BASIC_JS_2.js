@@ -1130,7 +1130,7 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
 
 
 
-  /*Exercice Prime Numbers */ 
+  /*Exercice Prime Numbers - Nombres premiers  */ 
     let num =50;
     let arr2 = [];
     for(let x =3;x<num;x=x+2){
