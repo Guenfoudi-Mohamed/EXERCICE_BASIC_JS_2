@@ -1159,3 +1159,47 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
             }
         }
     }
+
+  let list_0 = ["food","full","fooil","fikjikl"]; 
+    function SearchChar(arr,char){
+        let list_0 = arr;
+        let conteur = 0;
+        let result = "";
+        let bool = false;
+        r = 0;
+        for(let x = 0;x<list_0.length;x++){                                    
+            for(let z = 0;z<list_0[x].length;z++){                                   
+                if(list_0[x][z] === char[r]){           
+                    for(let w =(z+1);w < z+char.length;w++){  
+                        r++;
+                        if(list_0[x][w] === char[r]){
+                            conteur++;
+                        }
+                    }
+                    if(conteur===char.length-1){ 
+                        result+=list_0[x]+" "
+                        r=0;
+                        conteur=0;
+                        bool=true;
+                        break;
+                    }
+                    else{  // fhalat kanou 3ndna lea character kytchabho f nafs item  , plus kndirou countinue bax yb9a kychearch fnafs item mykhrjx meno
+                        r=0;
+                        conteur=0;
+                        continue;
+                    }
+                }
+            }
+            if(bool===true){
+                bool=false;
+                r=0;  
+                conteur=0;
+                //break; <<  fhalat mbrina ri first result 
+            }
+        }
+        if(result === ""){
+            result = "Error *-_-* => => char paramter";
+        }
+        return "Result : "+result;
+    }
+    console.log(SearchChar(list_0,"ul")); 
