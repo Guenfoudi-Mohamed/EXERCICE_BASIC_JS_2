@@ -1160,6 +1160,8 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
         }
     }
 
+
+  /*upload exercice search*/
   let list_0 = ["food","full","fooil","fikjikl"]; 
     function SearchChar(arr,char){
         let list_0 = arr;
