@@ -1232,3 +1232,31 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
     myFunction();
 
 
+    /*==========Note=============course=============*/
+
+                // possible nstantjo ana had l function 'Iterables' ktkhdm b
+                //  function >> Expression or arrow << with function 'call itself' =>=> method_1 
+        //method_1
+    let dt = (function(){
+        let num = 0;
+        return function gt(){
+            console.log("hello "+num++);
+        }
+    })();
+    dt();
+    dt();
+    dt();
+        //method_2
+    function dt(){
+        let num = 0;
+        function plus(){
+            return `Hello ${++num}`;
+        }
+        console.log("hello");
+        return plus;
+    };
+    let result = dt();
+    console.log(result());
+    console.log(result());
+    console.log(result());
+/*=====================================*/
