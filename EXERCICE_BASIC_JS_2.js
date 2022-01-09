@@ -1205,3 +1205,30 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
         return "Result : "+result;
     }
     console.log(SearchChar(list_0,"ul")); 
+
+
+/*==========Course========*/
+
+//Exercice CallBack Function && Function Run Itself && Closure Function.
+    let result = (function(){
+        function add(){
+            let num = 0;
+            function plus(){
+                return num++;
+            }
+            return plus;
+        }
+        let result = add();
+        return result;
+    })();
+    function myFunction(){        
+        console.log(`Hello Number ${result()}`);
+    }
+    myFunction();
+    myFunction();
+    myFunction();
+    myFunction();
+    myFunction();
+    myFunction();
+
+
