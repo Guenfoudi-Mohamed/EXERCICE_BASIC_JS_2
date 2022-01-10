@@ -1260,3 +1260,61 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
     console.log(result());
     console.log(result());
 /*=====================================*/
+
+//==================================================== exercice Note'<=<='
+    //method_1
+        function Player(name,age,enrgie){
+            let player = Object.create(Player.prototype);
+            player.namee=name;
+            player.age=age;
+            player.enrgie=enrgie;
+            return player;
+        }
+        Player.prototype.run=function(value=10){
+            this.enrgie-=value;
+            console.log(this.enrgie);
+        }
+        Player.prototype.kick=function(value=3){
+            this.enrgie-=value;
+            console.log(this.enrgie);
+        }
+        Player.prototype.jump=function(value=5){
+            this.enrgie-=value;
+            console.log(this.enrgie);
+        }
+        let person0 = Player("mohamed",24,300);
+        let person1 = Player("adnan",10,200); 
+        let person2 = Player("imad",17,154);
+        // console.log(person1.namee);
+        console.log(person0.kick());
+        console.log(person0.kick());
+        console.log(person0.kick());
+        console.log(person0.namee);
+    //method_2
+        function Player(name,age,enrgie){
+            // let player = Object.create(Player.prototype);
+            this.name=name;
+            this.age=age;
+            this.enrgie=enrgie;
+            this.run = function(value=10){
+                let result = ((this.enrgie-value) >= 5) && ((this.enrgie-value) <=10) ? "Erorr replace player!" : this.enrgie-=value;
+                return result;
+            }
+            this.jump = function(value=3){
+                let result = ((this.enrgie-value) >= 5) && ((this.enrgie-value) <=10) ? "Erorr replace player!" : this.enrgie-=value;
+                return result;
+            }
+            this.kick = function(value=5){
+                let result = ((this.enrgie-value) >= 5) && ((this.enrgie-value) <=10) ? "Erorr replace player! "+this.name : this.enrgie-=value;
+
+                return result;
+            }
+        }
+        let person0 =new Player("mohamed",24,30);
+        let person1 =new Player("adnan",10,20); 
+        let person2 =new Player("imad",17,15);
+        console.log(person0.kick());
+        console.log(person0.kick());
+        console.log(person0.kick());
+        console.log(person0.name);
+/*=====================================*/
