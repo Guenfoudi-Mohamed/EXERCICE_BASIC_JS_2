@@ -1336,7 +1336,9 @@ function user(name,age){
     }
     let perosn0 = new user("mohamed",24);
     perosn0.info();
-    console.log(perosn0 instanceof perosn0.constructor /*or user*/ );
-    console.log(perosn0.constructor === user);
+    console.log(perosn0 instanceof perosn0.constructor /*or user*/ );  // true
+    console.log(perosn0.constructor === user);  // true
     let person1 = user("adnane",11);  // if we don't use the 'new' keyword !
-    perosn1.info();
+    console.log(perosn1 instanceof perosn1.constructor /*or user*/ );  // false
+    console.log(perosn1.constructor === user); // false
+    perosn1.info(); //Erorr
