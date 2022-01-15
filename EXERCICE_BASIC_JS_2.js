@@ -1342,3 +1342,23 @@ function user(name,age){
     console.log(perosn1 instanceof perosn1.constructor /*or user*/ );  // false
     console.log(perosn1.constructor === user); // false
     perosn1.info(); //Erorr
+
+
+    //Note          'number of Object we Creat from class '
+    class user{
+        static conteur = 0
+        constructor(name){
+            this.name = name;
+            if(this instanceof user !== true){    //min mknkhdmux b new or kn9ulo l user ydir new bax k instance mn function constructor
+                throw new Error("most use new keyword in '"+this.name+"' Object");
+            }
+            user.conteur++;
+            //or
+            // if(this.constructor !== user){       //min mknkhdmux b new or kn9ulo l user ydir new bax k instance mn function constructor
+            //     throw new Error("most use new keyword in '"+this.name+"' Object");
+            // }
+        }
+    }
+    let us1 =new user("mohamed");
+    let us2 =new user("khalid");
+    console.log(user.conteur); // number of Object we Creat from class User
