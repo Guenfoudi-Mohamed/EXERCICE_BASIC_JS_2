@@ -1361,4 +1361,4 @@ function user(name,age){
     }
     let us1 =new user("mohamed");
     let us2 =new user("khalid");
-    console.log(user.conteur); // number of Object we Creat from class User
+    console.log(user.conteur); // number of Object we Creat from class User // user.conteur == 2
