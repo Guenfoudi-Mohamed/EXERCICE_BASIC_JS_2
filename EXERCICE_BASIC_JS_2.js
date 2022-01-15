@@ -1318,3 +1318,25 @@ let list0 = [["mohamed"],["amine","youssef",'t'],["isam",["khal1isd","hamid"]],"
         console.log(person0.kick());
         console.log(person0.name);
 /*=====================================*/
+//Note
+
+function user(name,age){
+        this.name=name;
+        this.age=age;
+        
+        if((this instanceof user) === false){
+            throw new Error(`the Object ${this.name} is not instance of ${user.name} Constructor use the 'new' keyword !`); //Erorr 
+        }
+        else{
+            this.info = function(){
+                console.log(`your name is ${this.name} and your age is ${this.age}`);
+            };
+        }
+        
+    }
+    let perosn0 = new user("mohamed",24);
+    perosn0.info();
+    console.log(perosn0 instanceof perosn0.constructor /*or user*/ );
+    console.log(perosn0.constructor === user);
+    let person1 = user("adnane",11);  // if we don't use the 'new' keyword !
+    perosn1.info();
