@@ -1362,3 +1362,53 @@ function user(name,age){
     let us1 =new user("mohamed");
     let us2 =new user("khalid");
     console.log(user.conteur); // number of Object we Creat from class User // user.conteur == 2
+
+                                                                    //* JavaScript Callback *//
+    // function print(value){
+    //     console.log(value);
+    // }
+    // function plus(value1,value2,FuncName){
+    //     let result = value1+value2;
+    //     print(result);
+    // }
+    // plus(5,4,print); //When you pass a function as an argument, remember not to use parenthesis.
+
+
+                                                                        //* Asynchronous JavaScript *//
+                            //setTimeout();
+
+    // function sayHi(name){
+    //     console.log("Hello "+name);
+    // }
+    // setTimeout(sayHi,1500,"Mohamed");                     //syntax =>    //setTimeout(NameFunction:WithOut '()',TIME => milliseconds  > 1s == 1000ms , argument);
+    
+    //or
+    // function sayHi(name){
+    //     console.log("Hello "+name);
+    // }
+    // setTimeout(function(){sayHi("Mohamed");},1500);  //syntax => //setTimeout(Function (){nameFunction(argument)},TIME => milliseconds  > 1s == 1000ms);
+
+
+                            //setinterval();
+    // let num = 0;
+    // function sayHi(name){
+    //     console.log(`Hello ${name} ${num++}`);
+    // }
+    // setInterval(sayHi,1500,"Mohamed");                      //syntax =>    //setTimeout(NameFunction:WithOut '()',TIME => milliseconds  > 1s == 1000ms , argument);
+
+    //or
+    // let num = 0;
+    // function sayHi(name){
+    //     console.log(`Hello ${name} ${num++}`);
+    // }
+    // setInterval(function(){sayHi("Mohamed");},1500);
+
+    //**Exercice                        >> 'Digital Clock'
+    // function time(){
+    //     let am_pm;
+    //     let date = new Date();
+    //     let hour = date.getHours();let minut = date.getMinutes();let second = date.getSeconds();
+    //     if(hour > 12){am_pm="PM";}else{am_pm="AM";}
+    //     console.log(`${hour} hour : ${minut} minut : ${second} second : ${am_pm}`);
+    // }
+    //  setInterval(time,1000);
