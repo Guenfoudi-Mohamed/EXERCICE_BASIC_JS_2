@@ -1412,3 +1412,27 @@ function user(name,age){
     //     console.log(`${hour} hour : ${minut} minut : ${second} second : ${am_pm}`);
     // }
     //  setInterval(time,1000);
+
+
+    //**Exercice 
+    function sameword(){
+        let word = "";
+        let conteur = 0;
+        arguments[0] = arguments[0].toLowerCase();
+        for(let i = arguments[0].length-1;i>=0;i--){
+            word+=arguments[0][i];
+        }
+        for(let i = 0;i<arguments[0].length;i++){
+            if(word[i] === arguments[0][i]){
+                conteur++;
+            }
+        }
+        if(conteur === arguments[0].length){
+            console.log(`Done >> same word`); 
+        }
+        else{console.log(`not same word ! TRY AGAIN`);}
+    }
+    sameword("medem");
+    sameword("hamid");
+    sameword("ANANa");
+    sameword("amine");
