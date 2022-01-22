@@ -1416,19 +1416,22 @@ function user(name,age){
 
     //**Exercice 
     function sameword(){
-        let word = "";
-        let conteur = 0;
-        arguments[0] = arguments[0].toLowerCase();
-        for(let i = arguments[0].length-1;i>=0;i--){
-            word+=arguments[0][i];
-        }
-        for(let i = 0;i<arguments[0].length;i++){
-            if(word[i] === arguments[0][i]){
-                conteur++;
+        if(arguments[0].length % 2 === 1){
+            let word = "";
+            let conteur = 0;
+            arguments[0] = arguments[0].toLowerCase();
+            for(let i = arguments[0].length-1;i>=0;i--){
+                word+=arguments[0][i];
             }
-        }
-        if(conteur === arguments[0].length){
-            console.log(`Done >> same word`); 
+            for(let i = 0;i<arguments[0].length;i++){
+                if(word[i] === arguments[0][i]){
+                    conteur++;
+                }
+            }
+            if(conteur === arguments[0].length){
+                console.log(`Done >> same word`); 
+            }
+            else{console.log(`not same word ! TRY AGAIN`);}
         }
         else{console.log(`not same word ! TRY AGAIN`);}
     }
@@ -1436,3 +1439,4 @@ function user(name,age){
     sameword("hamid");
     sameword("ANANa");
     sameword("amine");
+    sameword("khalid");
