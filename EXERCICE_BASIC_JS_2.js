@@ -1440,3 +1440,52 @@ function user(name,age){
     sameword("ANANa");
     sameword("amine");
     sameword("khalid");
+
+//controle random Number between limite
+        // method_1                                                            
+    const random  = (obj) => {
+        let {a,b} = obj;
+        return rndfun = () => {
+            let randnum = Math.random() * (a+1);
+            let result = Math.floor(randnum);
+            if(result>a || result<b){   
+                return rndfun();
+            }
+            else{  
+                console.log(result);
+            }
+        }
+    };
+    const obj = {a:7,b:5};
+    const result = random(obj);
+    result(obj);
+
+        // method_2
+    
+    const Random = function(a,b){
+        let limit = a+1;
+        let randnum = Math.random() * limit;
+        let result = Math.floor(randnum);
+        if(result>a || result<b){   
+            return Random(a,b);
+        }
+        else{  
+            console.log(result);
+        };
+    };
+    Random(5,3);
+    
+    //exercice                                          Exrcice_Passeword length => 6 , random  
+    function PasseWord(passeLength){
+        let result = '';
+        for(let i = 0;i<passeLength;i++){
+            result += Math.floor(Math.random()*10);
+        };
+        console.log(result);
+    }
+    PasseWord(6);   //PasseWord(Length of passeword);
+    PasseWord(6);
+    PasseWord(7);   //PasseWord(Length of passeword);
+    PasseWord(6);
+    PasseWord(6);
+    PasseWord(6);
